@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+#jogo {
+    width: 500px;
+    height: 201px;
+    border: 1px solid black;
+    background-image: url("img/background.jpg");
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    animation: fundoAnimado 1s linear infinite;
+}
+@keyframes fundoAnimado {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -2000px 0;
+  }
+}
+#personagem {
+    width: 60px;
+    height: 80px;
+    border: 1px solid black;
+    background-color: transparent;
+    position: relative;
+    top: 120px;
+}
+#bloco {
+    width: 20px; 
+    height: 20px;
+    background-color: transparent;
+    position: relative;
+    top: 100px;
+    left: 480px;
+    animation: bloco 1s infinite linear;
+}
+@keyframes bloco {
+    0%{left:480px;}
+    100%{left:-40px;}
+}
+@keyframes pular {
+    0%{top: 120px;}
+    30%{top: 90px;}
+    70%{top: 90px;}
+    100%{top: 120px;}
+}
+.animate {
+    animation: pular 500ms; 
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+p{
+    position: relative;
+    text-align: right;
+    font-family: "ThaleahFat", Arial, sans-serif;
+    color: white;
+}
+@font-face {
+    font-family: "ThaleahFat";
+    src: url("ThaleahFat.ttf");
+}
+.quadroPontuacao{
+    height: 20px;
+    position: absolute;
+    width: 100px;
+    left: 400px;
+}
